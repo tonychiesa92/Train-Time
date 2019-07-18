@@ -13,8 +13,20 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
+
+    <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
 <body>
@@ -30,7 +42,7 @@
     </div>
 
     <div class="container">
-        <div id="bets-here" class="card card-default">
+        <div id="current-here" class="card card-default">
             <div class="card-header">
                 <h5>Current Train Schedule</h5>
             </div>
@@ -44,7 +56,7 @@
                         <th scope="col">Minutes Away</th>
                     </tr>
                 </thead>
-                <tbody class="slaps">
+                <tbody class="train-info-here">
 
                 </tbody>
             </table>
@@ -70,7 +82,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">First Train (HH:mm- military time)</label>
-                                <input type="time" class="form-control" id="first-train-time" placeholder="">
+                                <input type="military time" class="form-control" id="first-train-time" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Frequency (min)</label>
