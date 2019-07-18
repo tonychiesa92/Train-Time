@@ -2,21 +2,92 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Train Time</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Train Time</h1>
+            <p class="lead">Choo Choo.</p>
+        </div>
+    </div>
+
+    <div class="container">
+    <div id="bets-here" class="card card-default">
+            <div class="card-header">
+                <h5>Current Train Schedule</h5>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody class="slaps">
+
+                </tbody>
+            </table>
+    </div>
+</div>
+    
+        <div class="container">
+                <div class="card" id="bet">
+                    <div class="card-header">
+                        <h5>Add Train</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputBet">Train Name</label>
+                                        <input type="name" class="form-control" id="train-name" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFriends">Destination</label>
+                                        <input type="city" class="form-control" id="destination" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">First Train (HH:mm- military time)</label>
+                                        <input type="time" class="form-control" id="first-train-time" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Frequency (min)</label>
+                                        <input type="number" class="form-control" id="frequency" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+                        </form>
+                    </div>
         
-        <script src="./javascript.js" async defer></script>
-    </body>
+                </div>
+
+
+
+
+    <script src="./javascript.js" async defer></script>
+</body>
+
 </html>
